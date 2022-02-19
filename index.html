@@ -38,7 +38,7 @@
         </div>
       </div>
       <div class="nav-list-mobile">
-        <input type="checkbox" name="" id="toggle-check" class="toggle-check">
+        <input type="checkbox" name="" id="toggle-check" class="toggle-check" />
         <div class="nav-list-mobile-header">
           <a href="#" class="nav-list-item"> Home </a>
           <label for="toggle-check" class="toggle toggle-bar">
@@ -166,6 +166,52 @@
                   <span class="tour-month-noctice--number">3</span>
                 </div>
               </div>
+              <input type="checkbox" name="" id="modal-checkbox" class="modal-checkbox">
+              <div class="modal modal-buy">
+                <div class="modal-content">
+                  <div class="modal-top">
+                    <div class="modal-top-heading">
+                      <i class="fa-solid fa-suitcase"></i>
+                      <span>Tickets</span>
+                    </div>
+                    <label for="modal-checkbox" class="modal-top-close modal-btn">
+                      <i class="fa-solid fa-xmark"></i>
+                    </label>
+                  </div>
+                  <div class="modal-bottom">
+                    <div class="modal-bottom-form">
+                      <div class="modal-bottom-form-item">
+                        <label for="many">
+                          <i class="fa-solid fa-cart-shopping"></i>
+                          <span>Tickets, $15 per person</span>
+                        </label>
+                        <input type="text" id="many" placeholder="How many?" />
+                      </div>
+                      <div class="modal-bottom-form-item">
+                        <label for="email">
+                          <i class="fa-solid fa-user"></i>
+                          <span>Send to</span>
+                        </label>
+                        <input type="text" id="email" placeholder="Enter email" />
+                      </div>
+                      <button class="modal-btn modal-bottom-form-button">
+                        Pay
+                        <i class="fa-solid fa-check"></i>
+                      </button>
+                      <div class="modal-bottom-form-more">
+                        <label for="modal-checkbox" class="modal-btn modal-btn-red">
+                          <span>Close</span>
+                          <i class="fa-solid fa-xmark"></i>
+                        </label>
+                        <div class="modal-bottom-need">
+                          Need <span><a href="#!">help?</a></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <label for="modal-checkbox" class="modal-overlay"></label>
+              </div>
               <div class="tour-place">
                 <div class="tour-place-item">
                   <img
@@ -180,7 +226,7 @@
                       Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                     </div>
                     <div class="tour-place-button">
-                      <a href="#!" class="button">Buy tickets</a>
+                      <label for="modal-checkbox" class="button">Buy tickets</label>
                     </div>
                   </div>
                 </div>
@@ -197,7 +243,7 @@
                       Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                     </div>
                     <div class="tour-place-button">
-                      <a href="#!" class="button">Buy tickets</a>
+                      <label for="modal-checkbox" class="button">Buy tickets</label>
                     </div>
                   </div>
                 </div>
@@ -215,7 +261,7 @@
                       sit, amet consectetur adipisicing elit.
                     </div>
                     <div class="tour-place-button">
-                      <a href="#!" class="button">Buy tickets</a>
+                      <label for="modal-checkbox" class="button">Buy tickets</label>
                     </div>
                   </div>
                 </div>
@@ -313,4 +359,5 @@
       </div>
     </footer>
   </body>
+  <script src="./assets/js/app.js"></script>
 </html>

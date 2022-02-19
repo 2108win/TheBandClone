@@ -1,12 +1,17 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 .is-hidden {
   display: none;
 }
 .is-visible {
-  display: block;
+  display: block !important;
+  opacity: 1;
 }
 .container {
   width: 100%;
@@ -46,6 +51,130 @@ body {
   &:hover {
     background: $gray-light;
     color: $black;
+  }
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 99999;
+  display: none;
+  transition: all 0.3s linear;
+  &-btn {
+    transition: all 0.2s ease-in-out;
+    &-red {
+      background: $red;
+      padding: 8px 16px;
+    }
+    &:hover {
+      background: $gray-light;
+      color: $black;
+      outline: none;
+      border: none;
+    }
+  }
+  &-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    background: $white;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 900px;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s linear;
+  }
+  &-top {
+    background-color: $green;
+    color: $white;
+    height: 129px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-heading {
+      font-size: 30px;
+      i {
+        margin-right: 15px;
+      }
+      span {
+        letter-spacing: 3px;
+      }
+    }
+    &-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 24px;
+      padding: 10px 20px;
+      background-color: transparent;
+    }
+  }
+  &-bottom {
+    padding: 20px;
+    &-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      &-item {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        color: $black;
+        font-size: 15px;
+        input {
+          padding: 8px;
+        }
+      }
+      &-button {
+        background-color: $green;
+        color: $white;
+        width: 100%;
+        padding: 15px 20px;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 10px;
+      }
+      &-more {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    &-need {
+      color: $black;
+      span a {
+        color: blue;
+      }
+    }
+  }
+  &-overlay {
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  &-checkbox {
+    display: none;
+    &:checked {
+      ~ .modal {
+        display: block;
+        .modal-content {
+          transform: translate(-50%, -50%);
+          opacity: 1;
+        }
+      }
+    }
   }
 }
 @media screen and (max-width: 767.98px) {
